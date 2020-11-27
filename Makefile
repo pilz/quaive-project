@@ -10,6 +10,9 @@ py38/bin/pip3.8:
 .installed.cfg: py38/bin/buildout buildout.cfg
 	./py38/bin/buildout
 
+upgrade:
+	./bin/upgrade plone_upgrade -S &&  ./bin/upgrade install -Sp
+
 .PHONY: clean
 clean:
 	rm -rf ./py38
